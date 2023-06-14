@@ -2,9 +2,10 @@ from ChatGpt import ChatGpt
 import telebot
 import keyboards
 import texts
+import env
 
-chat = ChatGpt("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")
-bot = telebot.TeleBot("6193806547:AAEB6g0adPD5zpX3bplYXqLfCc3ed55xHqI")
+chat = ChatGpt(env.gpt_token)
+bot = telebot.TeleBot(env.tgbot_token)
 
 
 @bot.message_handler(commands=["start"])
